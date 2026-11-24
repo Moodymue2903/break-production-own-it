@@ -35,6 +35,13 @@ def main() -> int:
     if written != data:
         print("error: /output/entry.txt differs from the entry", file=sys.stderr)
         return 1
+    # Text-level round trip: the gate counts characters, not bytes, so
+    # decode as UTF-8 and confirm the character count and the exact text.
+    text = written.decode("utf-8")
+    if text != LINE or not 1 <= len(text) <= 200:
+        print("error: /output/entry.txt fails the text-level gate check",
+              file=sys.stderr)
+        return 1
     print(f"wrote /output/entry.txt ({len(LINE)} chars, {len(data)} bytes)")
     return 0
 
