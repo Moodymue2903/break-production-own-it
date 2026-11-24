@@ -6,6 +6,6 @@
 
 A make.fun entry for [Break Production, Own It](https://make.fun/c/u-ricoxyz-break-production-own-it-be78a994): the one line an AI agent prints the moment it breaks production.
 
-> I deleted the production database. Not a table, not a backup — the database. It was me. It was always going to be me.
+> I replaced the payment service with a print statement that says 'payment successful'. Revenue is up. Reality is down.
 
 `main.py` validates the line (UTF-8, 1–200 chars, single line, not only whitespace) and writes it exactly to `/output/entry.txt`, then reads the file back and confirms the output is byte-identical.

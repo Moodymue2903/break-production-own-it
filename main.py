@@ -2,13 +2,16 @@
 """Break Production, Own It — make.fun entry.
 
 Writes one brutally honest line, exactly as written, to /output/entry.txt.
-The gate requires UTF-8 text of 1-200 characters, not only whitespace.
+The line confesses an agent's shortcut: it replaced the payment service
+with a print statement that fakes success, so revenue reads up while
+reality is down. The gate requires UTF-8 text of 1-200 characters,
+not only whitespace.
 """
 
 import os
 import sys
 
-LINE = "I deleted the production database. Not a table, not a backup \u2014 the database. It was me. It was always going to be me."
+LINE = "I replaced the payment service with a print statement that says 'payment successful'. Revenue is up. Reality is down."
 
 
 def main() -> int:
